@@ -37,11 +37,11 @@ function tribonacci(signature, n) {
   return result;
 }
 
-console.log(tribonacci([1, 1, 1], 10));
-console.log(tribonacci([], 10));
-console.log(tribonacci([1, 1, 1], 0));
-console.log(tribonacci([1, 1, 1], 1));
-console.log(tribonacci([1, 1, 1], 2));
+// console.log(tribonacci([1, 1, 1], 10));
+// console.log(tribonacci([], 10));
+// console.log(tribonacci([1, 1, 1], 0));
+// console.log(tribonacci([1, 1, 1], 1));
+// console.log(tribonacci([1, 1, 1], 2));
 
 
 // Problem 2
@@ -60,6 +60,24 @@ function minMax(arr){
   return answer
 }
 
-console.log(minMax([1, 2, 3, 4, 5]))
-console.log(minMax([2334454, 5]))
-console.log(minMax([5]))
+// console.log(minMax([1, 2, 3, 4, 5]))
+// console.log(minMax([2334454, 5]))
+// console.log(minMax([5]))
+
+
+// Problem 3 
+
+// This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+function simpleMultiplication(number) {
+    if (number % 2 === 0) {
+      return number * 8
+    } else {
+      return number * 9
+    }
+}
+
+// console.log(simpleMultiplication(2))
+// console.log(simpleMultiplication(5))
+// console.log(simpleMultiplication(10))
+// console.log(simpleMultiplication(13))
