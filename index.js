@@ -80,4 +80,58 @@ function simpleMultiplication(number) {
 // console.log(simpleMultiplication(2))
 // console.log(simpleMultiplication(5))
 // console.log(simpleMultiplication(10))
-// console.log(simpleMultiplication(13))
+// console.log(simpleMultiplication(13))  
+
+// problem 4
+
+
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+// It should remove all values from list a, which are present in list b keeping their order.
+
+
+// * I need to compare each array to the other and check if any numbers in the secound/b array are the same as any in the first/a array. 
+// If there is then I need to remove all of the repeating numbers from a 
+
+
+function arrayDiff(a, b) {
+  let answer = []
+  for (let i = 0; i < a.length; i++) {
+    if (b.length < 1) {
+      return a
+    }
+    for (let j = i + 1; j < b.length; j++) {
+      if (a[i] === b[j]) {
+        a.splice(i, 1)
+      }
+    }
+  }
+  return a
+}
+
+
+// console.log(arrayDiff([1,2],[1])) // == [2]         
+
+// ? Problem 5
+
+// ? Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+//? Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+const binaryArrayToNumber = arr => {
+  let answer = 0
+  let powerOf = 0
+  for (let i = arr.length - 1; i > -1; i--) {
+    // console.log(i)
+   answer += arr[i] * Math.pow(2, powerOf)
+   ++powerOf
+  }
+    //  console.log('--------------')
+  return answer 
+};
+
+console.log(binaryArrayToNumber([0, 0, 0, 1])) //* 1
+console.log(binaryArrayToNumber([0, 0, 1, 0])) //* 2
+console.log(binaryArrayToNumber([0, 1, 0, 1])) //* 5
+console.log(binaryArrayToNumber([1, 0, 0, 1])) //* 9
+
