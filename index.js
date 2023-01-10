@@ -130,8 +130,66 @@ const binaryArrayToNumber = arr => {
   return answer 
 };
 
-console.log(binaryArrayToNumber([0, 0, 0, 1])) //* 1
-console.log(binaryArrayToNumber([0, 0, 1, 0])) //* 2
-console.log(binaryArrayToNumber([0, 1, 0, 1])) //* 5
-console.log(binaryArrayToNumber([1, 0, 0, 1])) //* 9
+// console.log(binaryArrayToNumber([0, 0, 0, 1])) //* 1
+// console.log(binaryArrayToNumber([0, 0, 1, 0])) //* 2
+// console.log(binaryArrayToNumber([0, 1, 0, 1])) //* 5
+// console.log(binaryArrayToNumber([1, 0, 0, 1])) //* 9
 
+
+
+// ? Problem 6
+
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+function reverseWords(str) {
+  let reversed = ''
+  let newString = ''
+  let finalAns = ''
+  let joinedStr = ''
+newString = str.split(' ')
+// console.log(newString)
+let answer = newString.forEach(element => {
+  // console.log(element)
+  newString = element.split('')
+  // console.log(newString)
+   reversed = newString.reverse()
+  // console.log(reversed)
+  joinedStr = reversed.join('')
+  // console.log(joinedStr)
+   finalAns += joinedStr
+});
+  return finalAns
+}
+
+
+// console.log(reverseWords("This is an example!"))
+// console.log(reverseWords("double  spaces"))
+
+// ! Come back
+
+
+// ? problem 7  // Finished! 
+
+// ? An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+
+
+function isIsogram(str){
+  let lowercaseStr = str.toLowerCase()
+  console.log(lowercaseStr)
+  for (let i = 0; i < str.length; i++) {
+    for (let k = i + 1; k < str.length; k++) {
+      if (lowercaseStr[i] === lowercaseStr[k]) {
+          return false
+      }
+    }
+  }
+  return true
+}
+
+// console.log(isIsogram("Dermatoglyphics"))       // * "Dermatoglyphics" = true
+// console.log(isIsogram("moose"))     // * "moose" = false
+// console.log(isIsogram("aba"))     // * "aba" = false
