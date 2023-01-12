@@ -217,3 +217,27 @@ function lovefunc(flower1, flower2){
 // console.log(lovefunc(2,2))  // * false
 // console.log(lovefunc(0,1))  // * true
 // console.log(lovefunc(0,0))  // * false
+
+
+// ? Problem 9 
+
+// ? Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+
+function duplicateCount(text){
+  let lowercase = text.toLowerCase()
+  let textArr = lowercase.split('')
+  let duplicates = textArr.filter((element, index) => {
+    return textArr.indexOf(element) !== index
+  })
+  // console.log(duplicates)
+  let answer = [...new Set(duplicates)]
+  return answer.length
+}
+
+// console.log(duplicateCount("")) // 0
+// console.log(duplicateCount("abcde")) // 0
+// console.log(duplicateCount("aabbcde")) // 2
+// console.log(duplicateCount("aabBcde")) // 2
+// console.log(duplicateCount("Indivisibility")) // 1
+// console.log(duplicateCount("Indivisibilities")) // 2
