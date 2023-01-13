@@ -241,3 +241,21 @@ function duplicateCount(text){
 // console.log(duplicateCount("aabBcde")) // 2
 // console.log(duplicateCount("Indivisibility")) // 1
 // console.log(duplicateCount("Indivisibilities")) // 2
+
+
+// ? Problem 10 
+// ? Very simple, given an integer or a floating-point number, find its opposite.
+
+function opposite(number) {
+  if(number === 0) {
+    return 0
+  } else {
+    return number * -1
+  }
+}
+
+// console.log(opposite(1)) // * -1
+// console.log(opposite(14)) // * -14
+// console.log(opposite(0)) // * 0
+// console.log(opposite(-5)) // * 5
+// console.log(opposite(4.24)) // * -4.25
