@@ -259,3 +259,31 @@ function opposite(number) {
 // console.log(opposite(0)) // * 0
 // console.log(opposite(-5)) // * 5
 // console.log(opposite(4.24)) // * -4.25
+
+
+// ? Problem 11 
+
+// ? In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+// ? If anything in the text isn't a letter, ignore it and don't return it.
+
+let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+function alphabetPosition(text) {
+  const lowerCase = text.toLowerCase().split(' ').join('')
+  let answer = []
+  let char = ""
+  // console.log(lowerCase)
+    for (let i = 0; i < lowerCase.length; i++) {
+      char = lowerCase.charAt(i)
+      if (alphabet.indexOf(char) > - 1) {
+        answer.push(alphabet.indexOf(char) + 1)
+      }
+    }
+    let finalAnswer = answer.join(' ')
+  return finalAnswer
+}
+
+
+// console.log(alphabetPosition("The sunset sets at twelve o' clock.") // * "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
