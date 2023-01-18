@@ -332,3 +332,67 @@ function correct(string) {
 // console.log(correct("PAR15")) //* "PARIS"
 
 
+
+// ? Problem 
+
+const welcome = {
+english: 'Welcome',
+czech: 'Vitejte',
+danish: 'Velkomst',
+dutch: 'Welkom',
+estonian: 'Tere tulemast',
+finnish: 'Tervetuloa',
+flemish: 'Welgekomen',
+french: 'Bienvenue',
+german: 'Willkommen',
+irish: 'Failte',
+italian: 'Benvenuto',
+latvian: 'Gaidits',
+lithuanian: 'Laukiamas',
+polish: 'Witamy',
+spanish: 'Bienvenido',
+swedish: 'Valkommen',
+welsh: 'Croeso'
+}
+
+function greet(language) {
+   switch(language) {
+    case 'english': return welcome.english
+    
+    case 'czech': return welcome.czech
+    break
+    case 'danish': return welcome.danish
+    break
+    case 'dutch': return welcome.dutch
+    break
+    case 'estonian': return welcome.estonian
+    break
+    case 'finnish': return welcome.finnish
+    break
+    case 'flemish': return welcome.flemish
+    break
+    case 'french': return welcome.french
+    break
+    case 'german': return welcome.german
+    break
+    case 'irish': return welcome.irish
+    break
+    case 'italian': return welcome.italian
+    break
+    case 'latvian': return welcome.latvian
+    break
+    case 'lithuanian': return welcome.lithuanian
+    break
+    case 'polish': return welcome.polish
+    break
+    case 'spanish': return welcome.spanish
+    break
+    case 'swedish': return welcome.swedish
+    break
+    case 'welsh': return welcome.welsh
+    break
+    default: return 'Welcome'
+  }
+}
+
+// console.log(greet('english'))
