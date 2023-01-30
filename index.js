@@ -396,3 +396,26 @@ function greet(language) {
 }
 
 // console.log(greet('english'))
+
+// ? problem 14
+
+// ? Count the number of divisors of a positive integer n.
+
+// ? Random tests go up to n = 500000.
+
+function getDivisorsCnt(n){
+  let count = 0
+  let answer = 0
+  while (count < 500000) {
+    if (n % count === 0) {
+      answer++
+    }
+    count++
+  }
+  return answer
+}
+
+// console.log(getDivisorsCnt(4))  // * --> 3 (1, 2, 4)
+// console.log(getDivisorsCnt(5))  // * 2 (1, 5)
+// console.log(getDivisorsCnt(12)) // * 6 (1, 2, 3, 4, 6, 12)
+// console.log(getDivisorsCnt(30)) // * 8 (1, 2, 3, 5, 6, 10, 15, 30)
