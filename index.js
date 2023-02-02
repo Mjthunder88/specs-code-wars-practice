@@ -457,7 +457,36 @@ function getAge(inputString){
     return totalPeople 
   }
 
-  console.log(number([[10,0],[3,5],[5,8]])) // *,5;
-  console.log(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]])) // *,17;
-  console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]])) // *,21;
-  console.log(number([[0,0]])) // *,0
+  // console.log(number([[10,0],[3,5],[5,8]])) // *,5;
+  // console.log(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]])) // *,17;
+  // console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]])) // *,21;
+  // console.log(number([[0,0]])) // *,0
+
+
+
+
+  // ? problem 17
+
+  function XO(str) {
+    let countX = 0
+    let countO = 0
+    let lowerCase = str.toLowerCase()
+    for (let i = 0; i < lowerCase.length; i++) {
+      if (lowerCase[i] === 'x') {
+        countX++
+      } else if (lowerCase[i] === 'o') {
+        countO++
+      }
+    }
+    if (countX === countO) {
+      return true
+    } else {
+      return false
+    }
+}
+
+console.log(XO("ooxx"))// * => true
+console.log(XO("xooxx"))// * => false
+console.log(XO("ooxXm"))// * => true
+console.log(XO("zpzpzpp"))// * => true // when no 'x' and 'o' is present should return true
+console.log(XO("zzoo"))// * => false
