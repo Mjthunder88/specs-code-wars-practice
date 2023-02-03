@@ -485,8 +485,45 @@ function getAge(inputString){
     }
 }
 
-console.log(XO("ooxx"))// * => true
-console.log(XO("xooxx"))// * => false
-console.log(XO("ooxXm"))// * => true
-console.log(XO("zpzpzpp"))// * => true // when no 'x' and 'o' is present should return true
-console.log(XO("zzoo"))// * => false
+// console.log(XO("ooxx"))// * => true
+// console.log(XO("xooxx"))// * => false
+// console.log(XO("ooxXm"))// * => true
+// console.log(XO("zpzpzpp"))// * => true // when no 'x' and 'o' is present should return true
+// console.log(XO("zzoo"))// * => false
+
+// ? Problem 18
+
+//? Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
+
+//? Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
+
+//? If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
+//? If he doesn't get 10 hoops, return the string "Keep at it until you get it".
+
+function hoopCount (n) {
+  return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
+}
+
+// console.log((hoopCount(3))) //,"Keep at it until you get it" 
+// console.log((hoopCount(11))) //,"Great, now move on to tricks" 
+
+
+// ? problem 19
+
+// ?Your task is to create a function that does four basic mathematical operations.
+
+// ?The function should take three arguments - operation(string/char), value1(number), value2(number).
+//? The function should return result of numbers after applying the chosen operation.
+
+function basicOp(operation, value1, value2) {
+  if (operation === '+') {
+    return value1 + value2
+  } else if (operation === '-') {
+    return value1 - value2
+  } else if (operation === '*') {
+    return value1 * value2
+  } else if (operation === '/') {
+    return value1 / value2
+  }
+}
+
