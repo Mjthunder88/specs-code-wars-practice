@@ -632,3 +632,34 @@ function saleHotdogs(n) {
     return n *  90
   }
 }
+
+
+
+// ? Problem 26
+
+// ? The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+// ? What if the string is empty? Then the result should be empty object literal, {}.
+
+
+function count (string) {  
+  let countA = 0
+  let countB = 0
+  if (string === '') {
+    return {}
+  }
+  let answer = {}
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === 'a') {
+      countA++
+      answer.a = countA
+    } else if (string[i] === 'b') {
+      countB++
+      answer.b = countB
+    }
+  }
+   return answer;
+}
+
+console.log(count(""))
+console.log(count("aba"))
