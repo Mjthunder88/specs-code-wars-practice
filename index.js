@@ -661,5 +661,21 @@ function count (string) {
    return answer;
 }
 
-console.log(count(""))
-console.log(count("aba"))
+// console.log(count(""))
+// console.log(count("aba"))
+
+
+// ? Problem 27
+
+function highAndLow(numbers){
+  let arr = numbers.split(" ")
+  // console.log(arr)
+  let highest = Math.max(... arr)
+  let lowest = Math.min(... arr)
+  return highest + " " + lowest
+}
+
+
+console.log(highAndLow("1 2 3 4 5"));  // return "5 1"
+console.log(highAndLow("1 2 -3 4 5")); // return "5 -3"
+console.log(highAndLow("1 9 3 4 -5")); // return "9 -5"
