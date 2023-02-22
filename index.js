@@ -676,6 +676,22 @@ function highAndLow(numbers){
 }
 
 
-console.log(highAndLow("1 2 3 4 5"));  // return "5 1"
-console.log(highAndLow("1 2 -3 4 5")); // return "5 -3"
-console.log(highAndLow("1 9 3 4 -5")); // return "9 -5"
+// console.log(highAndLow("1 2 3 4 5"));  // return "5 1"
+// console.log(highAndLow("1 2 -3 4 5")); // return "5 -3"
+// console.log(highAndLow("1 9 3 4 -5")); // return "9 -5"
+
+
+// ? Problem 28
+
+function isTriangle(a,b,c) {
+  if (a <= 0 || b <= 0 || c <= 0) {
+    return false
+  } else if (a + b > c && a + c > b && b + c > a) {
+    return true
+  }
+   return false 
+}
+
+
+console.log(isTriangle(1,2,2))   //, true);
+console.log(isTriangle(7,2,2))  //, false;
