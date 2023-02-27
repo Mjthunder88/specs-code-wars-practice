@@ -693,5 +693,44 @@ function isTriangle(a,b,c) {
 }
 
 
-console.log(isTriangle(1,2,2))   //, true);
-console.log(isTriangle(7,2,2))  //, false;
+// console.log(isTriangle(1,2,2))   //, true);
+// console.log(isTriangle(7,2,2))  //, false;
+
+// ? Problem 29
+
+function finalGrade (exam, projects) {
+  if (exam > 90 || projects > 10) {
+    return 100
+  } else if (exam > 75 && projects >= 5 ) {
+    return 90
+  } else if (exam > 50 && projects >= 2) {
+    return 75
+  } else {
+    return 0
+  }
+}
+
+// console.log(finalGrade(100, 12)) //, 100);
+// console.log(finalGrade(85, 5)) //, 90);
+
+
+// ? Problem 30 
+
+function twoSum(numbers, target) {
+  let answer = []
+  for (let i = 0; i < numbers.length; i++) {
+    for (let k = i + 1; k < numbers.length; k++) {
+      if (numbers[i] + numbers[k] === target) {
+        // console.log(numbers[i], numbers[k])
+        let firstIndex = numbers.indexOf(numbers[i])
+        let secoundIndex = numbers.indexOf(numbers[k], 1)
+        console.log(firstIndex, secoundIndex, "index")
+        answer.push(firstIndex, secoundIndex)
+        return answer
+      }
+    }
+}
+}
+
+// console.log(twoSum([1, 2, 3], 4)) // returns [0, 2] 
+// console.log(twoSum([2, 2, 3], 4)) // returns [0, 1] 
