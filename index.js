@@ -734,3 +734,27 @@ function twoSum(numbers, target) {
 
 // console.log(twoSum([1, 2, 3], 4)) // returns [0, 2] 
 // console.log(twoSum([2, 2, 3], 4)) // returns [0, 1] 
+
+
+// ? Problem 31
+
+// ? Given an integral number, determine if it's a square number:
+
+var isSquare = function(n){
+  if (n < 0) {
+    return false
+  }
+  let num = Math.floor(Math.sqrt(n))
+  // console.log(num)
+  if (n === num * num) {
+    return true 
+  } else {
+    return false
+  }
+}
+
+// console.log(isSquare(-1)) // false
+// console.log(isSquare(0))  //  true
+// console.log(isSquare(3))  // false
+// console.log(isSquare(4))  // true
+// console.log(isSquare(25))  // true
