@@ -313,11 +313,11 @@ function alphabetPosition(text) {
 function correct(string) {
   let arr = string.split("");
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === '5') {
+    if (arr[i] === "5") {
       arr.splice(i, 1, "S");
-    } else if (arr[i] === '0') {
+    } else if (arr[i] === "0") {
       arr.splice(i, 1, "O");
-    } else if (arr[i] === '1') {
+    } else if (arr[i] === "1") {
       arr.splice(i, 1, "I");
     }
   }
@@ -331,67 +331,83 @@ function correct(string) {
 // console.log(correct("BUDAPE5T")) // *"BUDAPEST"
 // console.log(correct("PAR15")) //* "PARIS"
 
-
-
-// ? Problem 
+// ? Problem
 
 const welcome = {
-english: 'Welcome',
-czech: 'Vitejte',
-danish: 'Velkomst',
-dutch: 'Welkom',
-estonian: 'Tere tulemast',
-finnish: 'Tervetuloa',
-flemish: 'Welgekomen',
-french: 'Bienvenue',
-german: 'Willkommen',
-irish: 'Failte',
-italian: 'Benvenuto',
-latvian: 'Gaidits',
-lithuanian: 'Laukiamas',
-polish: 'Witamy',
-spanish: 'Bienvenido',
-swedish: 'Valkommen',
-welsh: 'Croeso'
-}
+  english: "Welcome",
+  czech: "Vitejte",
+  danish: "Velkomst",
+  dutch: "Welkom",
+  estonian: "Tere tulemast",
+  finnish: "Tervetuloa",
+  flemish: "Welgekomen",
+  french: "Bienvenue",
+  german: "Willkommen",
+  irish: "Failte",
+  italian: "Benvenuto",
+  latvian: "Gaidits",
+  lithuanian: "Laukiamas",
+  polish: "Witamy",
+  spanish: "Bienvenido",
+  swedish: "Valkommen",
+  welsh: "Croeso",
+};
 
 function greet(language) {
-   switch(language) {
-    case 'english': return welcome.english
-    
-    case 'czech': return welcome.czech
-    break
-    case 'danish': return welcome.danish
-    break
-    case 'dutch': return welcome.dutch
-    break
-    case 'estonian': return welcome.estonian
-    break
-    case 'finnish': return welcome.finnish
-    break
-    case 'flemish': return welcome.flemish
-    break
-    case 'french': return welcome.french
-    break
-    case 'german': return welcome.german
-    break
-    case 'irish': return welcome.irish
-    break
-    case 'italian': return welcome.italian
-    break
-    case 'latvian': return welcome.latvian
-    break
-    case 'lithuanian': return welcome.lithuanian
-    break
-    case 'polish': return welcome.polish
-    break
-    case 'spanish': return welcome.spanish
-    break
-    case 'swedish': return welcome.swedish
-    break
-    case 'welsh': return welcome.welsh
-    break
-    default: return 'Welcome'
+  switch (language) {
+    case "english":
+      return welcome.english;
+
+    case "czech":
+      return welcome.czech;
+      break;
+    case "danish":
+      return welcome.danish;
+      break;
+    case "dutch":
+      return welcome.dutch;
+      break;
+    case "estonian":
+      return welcome.estonian;
+      break;
+    case "finnish":
+      return welcome.finnish;
+      break;
+    case "flemish":
+      return welcome.flemish;
+      break;
+    case "french":
+      return welcome.french;
+      break;
+    case "german":
+      return welcome.german;
+      break;
+    case "irish":
+      return welcome.irish;
+      break;
+    case "italian":
+      return welcome.italian;
+      break;
+    case "latvian":
+      return welcome.latvian;
+      break;
+    case "lithuanian":
+      return welcome.lithuanian;
+      break;
+    case "polish":
+      return welcome.polish;
+      break;
+    case "spanish":
+      return welcome.spanish;
+      break;
+    case "swedish":
+      return welcome.swedish;
+      break;
+    case "welsh":
+      return welcome.welsh;
+      break;
+    default:
+      return "Welcome";
   }
 }
 
@@ -403,16 +419,16 @@ function greet(language) {
 
 // ? Random tests go up to n = 500000.
 
-function getDivisorsCnt(n){
-  let count = 0
-  let answer = 0
+function getDivisorsCnt(n) {
+  let count = 0;
+  let answer = 0;
   while (count < 500000) {
     if (n % count === 0) {
-      answer++
+      answer++;
     }
-    count++
+    count++;
   }
-  return answer
+  return answer;
 }
 
 // console.log(getDivisorsCnt(4))  // * --> 3 (1, 2, 4)
@@ -420,9 +436,7 @@ function getDivisorsCnt(n){
 // console.log(getDivisorsCnt(12)) // * 6 (1, 2, 3, 4, 6, 12)
 // console.log(getDivisorsCnt(30)) // * 8 (1, 2, 3, 5, 6, 10, 15, 30)
 
-
 // ? problem 15
-
 
 // ? You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
 
@@ -430,15 +444,14 @@ function getDivisorsCnt(n){
 
 // ? Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
 
-function getAge(inputString){
-  let answer = parseInt(inputString)
-  return answer
-  }
+function getAge(inputString) {
+  let answer = parseInt(inputString);
+  return answer;
+}
 
-  // console.log(getAge("4 years old")) //, 4
+// console.log(getAge("4 years old")) //, 4
 
-
-  // ? problem 16
+// ? problem 16
 
 // ?   There is a bus moving in the city which takes and drops some people at each bus stop.
 // ? You are provided with a list (or array) of integer pairs. Elements of each pair represent the number of people that get on the bus (the first item) and the number of people that get off the bus (the second item) at a bus stop.
@@ -446,43 +459,39 @@ function getAge(inputString){
 
 // ? The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.
 
-
-  var number = function(busStops){
-    // console.log(busStops[0][0])
-    let totalPeople = 0
-    for (let i = 0; i < busStops.length; i++) {
-      totalPeople += busStops[i][0]
-      totalPeople -= busStops[i][1]
-    }
-    return totalPeople 
+var number = function (busStops) {
+  // console.log(busStops[0][0])
+  let totalPeople = 0;
+  for (let i = 0; i < busStops.length; i++) {
+    totalPeople += busStops[i][0];
+    totalPeople -= busStops[i][1];
   }
+  return totalPeople;
+};
 
-  // console.log(number([[10,0],[3,5],[5,8]])) // *,5;
-  // console.log(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]])) // *,17;
-  // console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]])) // *,21;
-  // console.log(number([[0,0]])) // *,0
+// console.log(number([[10,0],[3,5],[5,8]])) // *,5;
+// console.log(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]])) // *,17;
+// console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]])) // *,21;
+// console.log(number([[0,0]])) // *,0
 
+// ? problem 17
 
-
-
-  // ? problem 17
-
-  function XO(str) {
-    let countX = 0
-    let countO = 0
-    let lowerCase = str.toLowerCase()
-    for (let i = 0; i < lowerCase.length; i++) {
-      if (lowerCase[i] === 'x') {
-        countX++
-      } else if (lowerCase[i] === 'o') {
-        countO++
-      }
+function XO(str) {
+  let countX = 0;
+  let countO = 0;
+  let lowerCase = str.toLowerCase();
+  for (let i = 0; i < lowerCase.length; i++) {
+    if (lowerCase[i] === "x") {
+      countX++;
+    } else if (lowerCase[i] === "o") {
+      countO++;
     }
-    if (countX === countO) {
-      return true
-    } else {
-      return false
-    }
+  }
+  if (countX === countO) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // console.log(XO("ooxx"))// * => true
@@ -500,13 +509,14 @@ function getAge(inputString){
 //? If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
 //? If he doesn't get 10 hoops, return the string "Keep at it until you get it".
 
-function hoopCount (n) {
-  return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
+function hoopCount(n) {
+  return n >= 10
+    ? "Great, now move on to tricks"
+    : "Keep at it until you get it";
 }
 
-// console.log((hoopCount(3))) //,"Keep at it until you get it" 
-// console.log((hoopCount(11))) //,"Great, now move on to tricks" 
-
+// console.log((hoopCount(3))) //,"Keep at it until you get it"
+// console.log((hoopCount(11))) //,"Great, now move on to tricks"
 
 // ? problem 19
 
@@ -516,32 +526,31 @@ function hoopCount (n) {
 //? The function should return result of numbers after applying the chosen operation.
 
 function basicOp(operation, value1, value2) {
-  if (operation === '+') {
-    return value1 + value2
-  } else if (operation === '-') {
-    return value1 - value2
-  } else if (operation === '*') {
-    return value1 * value2
-  } else if (operation === '/') {
-    return value1 / value2
+  if (operation === "+") {
+    return value1 + value2;
+  } else if (operation === "-") {
+    return value1 - value2;
+  } else if (operation === "*") {
+    return value1 * value2;
+  } else if (operation === "/") {
+    return value1 / value2;
   }
 }
-
 
 // ? problem 20
 
 function points(games) {
-  let points = 0
+  let points = 0;
   games.forEach((element, index) => {
     if (+element[0] > +element[2]) {
-      points += 3
+      points += 3;
     } else if (+element[0] < +element[2]) {
-      points +=  0
+      points += 0;
     } else if (+element[0] === +element[2]) {
-      points += 1
+      points += 1;
     }
-  })
-  return points
+  });
+  return points;
 }
 
 // console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"])) // * 30
@@ -555,11 +564,11 @@ function points(games) {
 // ? Function should return true if it is possible and false if not.
 
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-  let milesLeft = mpg * fuelLeft
+  let milesLeft = mpg * fuelLeft;
   if (milesLeft < distanceToPump) {
-    return false
+    return false;
   } else {
-    return true
+    return true;
   }
 };
 
@@ -576,11 +585,11 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 
 function countBy(x, n) {
   let z = [];
-  let i = 1
+  let i = 1;
   while (i <= n) {
-    z.push(x * i)
+    z.push(x * i);
 
-    i++
+    i++;
   }
   return z;
 }
@@ -594,26 +603,21 @@ function countBy(x, n) {
 
 // ?Return true if it is a factor or false if it is not.
 
-
-
-function checkForFactor (base, factor) {
-  return base % factor === 0 ? true : false 
+function checkForFactor(base, factor) {
+  return base % factor === 0 ? true : false;
 }
-
 
 // ? Problem 24
 
 // ? It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
 
-function removeChar(str){
-  let arr = str.split('')
-   arr.splice(0, 1)
-   arr.splice(arr.length - 1, 1)
-  let answer = arr.join('')
-   return answer
- 
- };
- 
+function removeChar(str) {
+  let arr = str.split("");
+  arr.splice(0, 1);
+  arr.splice(arr.length - 1, 1);
+  let answer = arr.join("");
+  return answer;
+}
 
 //  console.log(removeChar('eloquent'))   // , 'loquen'
 //  console.log(removeChar('country'))   //  'ountr'
@@ -625,15 +629,13 @@ function removeChar(str){
 
 function saleHotdogs(n) {
   if (n < 5) {
-    return n * 100
+    return n * 100;
   } else if (n >= 5 && n < 10) {
-    return n *  95
+    return n * 95;
   } else {
-    return n *  90
+    return n * 90;
   }
 }
-
-
 
 // ? Problem 26
 
@@ -641,120 +643,146 @@ function saleHotdogs(n) {
 
 // ? What if the string is empty? Then the result should be empty object literal, {}.
 
-
-function count (string) {  
-  let countA = 0
-  let countB = 0
-  if (string === '') {
-    return {}
+function count(string) {
+  let countA = 0;
+  let countB = 0;
+  if (string === "") {
+    return {};
   }
-  let answer = {}
+  let answer = {};
   for (let i = 0; i < string.length; i++) {
-    if (string[i] === 'a') {
-      countA++
-      answer.a = countA
-    } else if (string[i] === 'b') {
-      countB++
-      answer.b = countB
+    if (string[i] === "a") {
+      countA++;
+      answer.a = countA;
+    } else if (string[i] === "b") {
+      countB++;
+      answer.b = countB;
     }
   }
-   return answer;
+  return answer;
 }
 
 // console.log(count(""))
 // console.log(count("aba"))
 
-
 // ? Problem 27
 
-function highAndLow(numbers){
-  let arr = numbers.split(" ")
+function highAndLow(numbers) {
+  let arr = numbers.split(" ");
   // console.log(arr)
-  let highest = Math.max(... arr)
-  let lowest = Math.min(... arr)
-  return highest + " " + lowest
+  let highest = Math.max(...arr);
+  let lowest = Math.min(...arr);
+  return highest + " " + lowest;
 }
-
 
 // console.log(highAndLow("1 2 3 4 5"));  // return "5 1"
 // console.log(highAndLow("1 2 -3 4 5")); // return "5 -3"
 // console.log(highAndLow("1 9 3 4 -5")); // return "9 -5"
 
-
 // ? Problem 28
 
-function isTriangle(a,b,c) {
+function isTriangle(a, b, c) {
   if (a <= 0 || b <= 0 || c <= 0) {
-    return false
+    return false;
   } else if (a + b > c && a + c > b && b + c > a) {
-    return true
+    return true;
   }
-   return false 
+  return false;
 }
-
 
 // console.log(isTriangle(1,2,2))   //, true);
 // console.log(isTriangle(7,2,2))  //, false;
 
 // ? Problem 29
 
-function finalGrade (exam, projects) {
+function finalGrade(exam, projects) {
   if (exam > 90 || projects > 10) {
-    return 100
-  } else if (exam > 75 && projects >= 5 ) {
-    return 90
+    return 100;
+  } else if (exam > 75 && projects >= 5) {
+    return 90;
   } else if (exam > 50 && projects >= 2) {
-    return 75
+    return 75;
   } else {
-    return 0
+    return 0;
   }
 }
 
 // console.log(finalGrade(100, 12)) //, 100);
 // console.log(finalGrade(85, 5)) //, 90);
 
-
-// ? Problem 30 
+// ? Problem 30
 
 function twoSum(numbers, target) {
-  let answer = []
+  let answer = [];
   for (let i = 0; i < numbers.length; i++) {
     for (let k = i + 1; k < numbers.length; k++) {
       if (numbers[i] + numbers[k] === target) {
         // console.log(numbers[i], numbers[k])
-        let firstIndex = numbers.indexOf(numbers[i])
-        let secoundIndex = numbers.indexOf(numbers[k], 1)
-        console.log(firstIndex, secoundIndex, "index")
-        answer.push(firstIndex, secoundIndex)
-        return answer
+        let firstIndex = numbers.indexOf(numbers[i]);
+        let secoundIndex = numbers.indexOf(numbers[k], 1);
+        console.log(firstIndex, secoundIndex, "index");
+        answer.push(firstIndex, secoundIndex);
+        return answer;
       }
     }
-}
+  }
 }
 
-// console.log(twoSum([1, 2, 3], 4)) // returns [0, 2] 
-// console.log(twoSum([2, 2, 3], 4)) // returns [0, 1] 
-
+// console.log(twoSum([1, 2, 3], 4)) // returns [0, 2]
+// console.log(twoSum([2, 2, 3], 4)) // returns [0, 1]
 
 // ? Problem 31
 
 // ? Given an integral number, determine if it's a square number:
 
-var isSquare = function(n){
+var isSquare = function (n) {
   if (n < 0) {
-    return false
+    return false;
   }
-  let num = Math.floor(Math.sqrt(n))
+  let num = Math.floor(Math.sqrt(n));
   // console.log(num)
   if (n === num * num) {
-    return true 
+    return true;
   } else {
-    return false
+    return false;
   }
-}
+};
 
 // console.log(isSquare(-1)) // false
 // console.log(isSquare(0))  //  true
 // console.log(isSquare(3))  // false
 // console.log(isSquare(4))  // true
 // console.log(isSquare(25))  // true
+
+// ? Problem 32
+
+// ? You receive an array with your peers' test scores. Now calculate the average and compare your score!
+
+// ? Return True if you're better, else False!
+
+function betterThanAverage(classPoints, yourPoints) {
+  let average = 0;
+  classPoints.forEach((element) => {
+    average += element;
+  });
+  let answer = Math.floor(average / classPoints.length);
+  console.log(answer);
+
+  if (answer === yourPoints) {
+    return false;
+  } else if (answer < yourPoints) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// console.log(betterThanAverage([2, 3], 5)); //, true);
+
+// console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75)); //, true);
+
+// console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9)); //, false);
+
+// console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50)); //, false);
+
+// console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21)); //, false);
