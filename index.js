@@ -786,3 +786,23 @@ function betterThanAverage(classPoints, yourPoints) {
 // console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50)); //, false);
 
 // console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21)); //, false);
+
+// ? Problem 33 
+// TODO SORTING 
+
+// ? Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
+
+function solution(nums){
+  if (nums === null || nums === []) {
+    return []
+  }
+  let answer = nums.sort((a, b) =>  a - b);
+  return answer
+
+}
+
+// console.log(solution([1,2,3,10,5]))//, [1,2,3,5,10])
+// console.log(solution(null))//, [])
+// console.log(solution([]))//, [])
+// console.log(solution([20, 2, 10]))//, [2,10,20])
+// console.log(solution([2, 20, 10]))//, [2,10,20])
