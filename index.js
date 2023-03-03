@@ -806,3 +806,27 @@ function solution(nums){
 // console.log(solution([]))//, [])
 // console.log(solution([20, 2, 10]))//, [2,10,20])
 // console.log(solution([2, 20, 10]))//, [2,10,20])
+
+
+
+// ? Problem 34
+
+//  ?Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+
+
+function sum (numbers) {
+  let final = 0
+  if (numbers === null) {
+    return 0
+  }else {
+    let answer = numbers.map((element, index) => {
+      return final += element
+    })
+    return final
+  }
+
+  
+};
+
+console.log(sum([])) //, 0);
+console.log(sum([1, 5.2, 4, 0, -1])) // 9.2);
