@@ -828,5 +828,26 @@ function sum (numbers) {
   
 };
 
-console.log(sum([])) //, 0);
-console.log(sum([1, 5.2, 4, 0, -1])) // 9.2);
+// console.log(sum([])) //, 0);
+// console.log(sum([1, 5.2, 4, 0, -1])) // 9.2);
+
+
+// ? Problem 35
+
+function fakeBin(x){
+  let arr = x.split('')
+  for (let i = 0; i < arr.length; i++) {
+    if (+arr[i] < 5) {
+      arr.splice(i, 1, '0')
+} else if (+x[i] >= 5) {
+      arr.splice(i, 1, '1')
+  }
+}
+let answer = arr.join('')
+console.log(answer)
+return answer
+}
+
+console.log(fakeBin('45385593107843568')) //), '01011110001100111');
+console.log(fakeBin('509321967506747')) //, '101000111101101'); 
+console.log(fakeBin('366058562030849490134388085')) //, '011011110000101010000011011')
