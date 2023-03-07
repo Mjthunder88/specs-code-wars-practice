@@ -848,6 +848,30 @@ console.log(answer)
 return answer
 }
 
-console.log(fakeBin('45385593107843568')) //), '01011110001100111');
-console.log(fakeBin('509321967506747')) //, '101000111101101'); 
-console.log(fakeBin('366058562030849490134388085')) //, '011011110000101010000011011')
+// console.log(fakeBin('45385593107843568')) //), '01011110001100111');
+// console.log(fakeBin('509321967506747')) //, '101000111101101'); 
+// console.log(fakeBin('366058562030849490134388085')) //, '011011110000101010000011011')
+
+// ? Problem 36
+
+function helloWorld () {
+  let str = "Hello World!"
+  console.log(str)
+}
+
+
+// ? Problem 37
+
+// ?You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+// ? If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+const areaOrPerimeter = function(l , w) {
+  if (l === w) {
+    return l * w
+  } else {
+    return 2 * (l + w)
+  }
+};
+
+console.log(areaOrPerimeter(3, 3)) // 9
+console.log(areaOrPerimeter(6, 10)) //32
