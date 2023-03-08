@@ -873,5 +873,26 @@ const areaOrPerimeter = function(l , w) {
   }
 };
 
-console.log(areaOrPerimeter(3, 3)) // 9
-console.log(areaOrPerimeter(6, 10)) //32
+// console.log(areaOrPerimeter(3, 3)) // 9
+// console.log(areaOrPerimeter(6, 10)) //32
+
+// ? Problem 38
+
+var countSheep = function (num) {
+  let count = 0
+  let answer = ""
+  if (num === 0) {
+   return ""
+   }
+
+  while (num > count) {
+   answer += `${count + 1} sheep...`
+    count++
+  }
+  return answer
+}
+
+// console.log(countSheep(0)) // *, "");
+// console.log(countSheep(1)) // *, "1 sheep...");
+// console.log(countSheep(2)) // *, "1 sheep...2 sheep...");
+// console.log(countSheep(3)) // *, "1 sheep...2 sheep...3 sheep...");
