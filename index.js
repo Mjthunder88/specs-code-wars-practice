@@ -896,3 +896,17 @@ var countSheep = function (num) {
 // console.log(countSheep(1)) // *, "1 sheep...");
 // console.log(countSheep(2)) // *, "1 sheep...2 sheep...");
 // console.log(countSheep(3)) // *, "1 sheep...2 sheep...3 sheep...");
+
+
+
+// ? Problem 39
+
+function shortcut (string) {
+  let answer = ""
+  return answer = string.replace(/[aeiou]/ig, "")
+}
+
+// console.log(shortcut('hello')) // *, 'hll');
+// console.log(shortcut('how are you today?')) // *, 'hw r y tdy?');
+// console.log(shortcut('complain')) // *, 'cmpln');
+// console.log(shortcut('never')) // *, 'nvr');
