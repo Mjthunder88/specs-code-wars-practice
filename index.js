@@ -910,3 +910,18 @@ function shortcut (string) {
 // console.log(shortcut('how are you today?')) // *, 'hw r y tdy?');
 // console.log(shortcut('complain')) // *, 'cmpln');
 // console.log(shortcut('never')) // *, 'nvr');
+
+// ? Problem 40
+
+// ? DNA => RNA
+// ?  create a function which returns an RNA sequence from the given DNA sequence
+
+function DNAtoRNA(dna) {
+  let answer = ""
+  answer = dna.replace(/[T]/g, "U" )
+  return answer
+}
+
+    // console.log(DNAtoRNA("TTTT")) // *, "UUUU")
+    // console.log(DNAtoRNA("GCAT")) // *, "GCAU")
+    // console.log(DNAtoRNA("GACCGCCGCC")) // *, "GACCGCCGCC")
