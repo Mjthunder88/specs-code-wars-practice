@@ -787,18 +787,17 @@ function betterThanAverage(classPoints, yourPoints) {
 
 // console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21)); //, false);
 
-// ? Problem 33 
-// TODO SORTING 
+// ? Problem 33
+// TODO SORTING
 
 // ? Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
 
-function solution(nums){
+function solution(nums) {
   if (nums === null || nums === []) {
-    return []
+    return [];
   }
-  let answer = nums.sort((a, b) =>  a - b);
-  return answer
-
+  let answer = nums.sort((a, b) => a - b);
+  return answer;
 }
 
 // console.log(solution([1,2,3,10,5]))//, [1,2,3,5,10])
@@ -807,69 +806,62 @@ function solution(nums){
 // console.log(solution([20, 2, 10]))//, [2,10,20])
 // console.log(solution([2, 20, 10]))//, [2,10,20])
 
-
-
 // ? Problem 34
 
 //  ?Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
 
-
-function sum (numbers) {
-  let final = 0
+function sum(numbers) {
+  let final = 0;
   if (numbers === null) {
-    return 0
-  }else {
+    return 0;
+  } else {
     let answer = numbers.map((element, index) => {
-      return final += element
-    })
-    return final
+      return (final += element);
+    });
+    return final;
   }
-
-  
-};
+}
 
 // console.log(sum([])) //, 0);
 // console.log(sum([1, 5.2, 4, 0, -1])) // 9.2);
 
-
 // ? Problem 35
 
-function fakeBin(x){
-  let arr = x.split('')
+function fakeBin(x) {
+  let arr = x.split("");
   for (let i = 0; i < arr.length; i++) {
     if (+arr[i] < 5) {
-      arr.splice(i, 1, '0')
-} else if (+x[i] >= 5) {
-      arr.splice(i, 1, '1')
+      arr.splice(i, 1, "0");
+    } else if (+x[i] >= 5) {
+      arr.splice(i, 1, "1");
+    }
   }
-}
-let answer = arr.join('')
-console.log(answer)
-return answer
+  let answer = arr.join("");
+  console.log(answer);
+  return answer;
 }
 
 // console.log(fakeBin('45385593107843568')) //), '01011110001100111');
-// console.log(fakeBin('509321967506747')) //, '101000111101101'); 
+// console.log(fakeBin('509321967506747')) //, '101000111101101');
 // console.log(fakeBin('366058562030849490134388085')) //, '011011110000101010000011011')
 
 // ? Problem 36
 
-function helloWorld () {
-  let str = "Hello World!"
-  console.log(str)
+function helloWorld() {
+  let str = "Hello World!";
+  console.log(str);
 }
-
 
 // ? Problem 37
 
 // ?You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
 // ? If it is a square, return its area. If it is a rectangle, return its perimeter.
 
-const areaOrPerimeter = function(l , w) {
+const areaOrPerimeter = function (l, w) {
   if (l === w) {
-    return l * w
+    return l * w;
   } else {
-    return 2 * (l + w)
+    return 2 * (l + w);
   }
 };
 
@@ -879,31 +871,29 @@ const areaOrPerimeter = function(l , w) {
 // ? Problem 38
 
 var countSheep = function (num) {
-  let count = 0
-  let answer = ""
+  let count = 0;
+  let answer = "";
   if (num === 0) {
-   return ""
-   }
+    return "";
+  }
 
   while (num > count) {
-   answer += `${count + 1} sheep...`
-    count++
+    answer += `${count + 1} sheep...`;
+    count++;
   }
-  return answer
-}
+  return answer;
+};
 
 // console.log(countSheep(0)) // *, "");
 // console.log(countSheep(1)) // *, "1 sheep...");
 // console.log(countSheep(2)) // *, "1 sheep...2 sheep...");
 // console.log(countSheep(3)) // *, "1 sheep...2 sheep...3 sheep...");
 
-
-
 // ? Problem 39
 
-function shortcut (string) {
-  let answer = ""
-  return answer = string.replace(/[aeiou]/ig, "")
+function shortcut(string) {
+  let answer = "";
+  return (answer = string.replace(/[aeiou]/gi, ""));
 }
 
 // console.log(shortcut('hello')) // *, 'hll');
@@ -917,11 +907,37 @@ function shortcut (string) {
 // ?  create a function which returns an RNA sequence from the given DNA sequence
 
 function DNAtoRNA(dna) {
+  let answer = "";
+  answer = dna.replace(/[T]/g, "U");
+  return answer;
+}
+
+// console.log(DNAtoRNA("TTTT")) // *, "UUUU")
+// console.log(DNAtoRNA("GCAT")) // *, "GCAU")
+// console.log(DNAtoRNA("GACCGCCGCC")) // *, "GACCGCCGCC")
+
+// ? Problem 41
+
+// ? Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+function removeUrlAnchor(url) {
   let answer = ""
-  answer = dna.replace(/[T]/g, "U" )
+  if (!url.includes('#')) {
+    return url
+  }
+  for (let i = 0; i < url.length; i++) {
+    if (url[i] === '#') {
+      answer = url.slice(0, i)
+    }
+  }
   return answer
 }
 
-    // console.log(DNAtoRNA("TTTT")) // *, "UUUU")
-    // console.log(DNAtoRNA("GCAT")) // *, "GCAU")
-    // console.log(DNAtoRNA("GACCGCCGCC")) // *, "GACCGCCGCC")
+  console.log(removeUrlAnchor('www.codewars.com#about')) //, 'www.codewars.com')
+    console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about')) //, 'www.codewars.com/katas/?page=1')
+  console.log(removeUrlAnchor('www.codewars.com/katas/')) //, 'www.codewars.com/katas/')
+
+
+
+
+
