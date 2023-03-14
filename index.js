@@ -933,9 +933,25 @@ function removeUrlAnchor(url) {
   return answer
 }
 
-  console.log(removeUrlAnchor('www.codewars.com#about')) //, 'www.codewars.com')
-    console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about')) //, 'www.codewars.com/katas/?page=1')
-  console.log(removeUrlAnchor('www.codewars.com/katas/')) //, 'www.codewars.com/katas/')
+  // console.log(removeUrlAnchor('www.codewars.com#about')) //, 'www.codewars.com')
+  //   console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about')) //, 'www.codewars.com/katas/?page=1')
+  // console.log(removeUrlAnchor('www.codewars.com/katas/')) //, 'www.codewars.com/katas/')
+
+  // ? Problem 42
+  // ? Write a function that takes a single string (word) as argument. The function must return an ordered list containing the indexes of all capital letters in the string.
+
+  var capitals = function (word) {
+    let answer = []
+    for (let i = 0; i < word.length ; i++) {
+      if (word[i] === word[i].toUpperCase()) {
+        answer.push(i)
+
+      }
+    }
+    return answer
+  };
+
+  console.log(capitals('CodEWaRs')) // *, [0,3,4,6] );
 
 
 
