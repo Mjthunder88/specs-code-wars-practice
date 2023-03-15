@@ -951,7 +951,25 @@ function removeUrlAnchor(url) {
     return answer
   };
 
-  console.log(capitals('CodEWaRs')) // *, [0,3,4,6] );
+  // console.log(capitals('CodEWaRs')) // *, [0,3,4,6] );
+
+  // ? Problem 43
+  // ? A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence 
+
+  function isPangram(string){
+  if (string.match(/([a-z])(?!.*\1)/gi).length === 26) {
+    return true
+  } else {
+    return false
+  }
+}
+
+
+// console.log(isPangram("The quick brown fox jumps over the lazy dog."))
+// console.log(isPangram("This is not a pangram."))
+
+
+
 
 
 
