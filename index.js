@@ -921,57 +921,73 @@ function DNAtoRNA(dna) {
 // ? Complete the function/method so that it returns the url with anything after the anchor (#) removed.
 
 function removeUrlAnchor(url) {
-  let answer = ""
-  if (!url.includes('#')) {
-    return url
+  let answer = "";
+  if (!url.includes("#")) {
+    return url;
   }
   for (let i = 0; i < url.length; i++) {
-    if (url[i] === '#') {
-      answer = url.slice(0, i)
+    if (url[i] === "#") {
+      answer = url.slice(0, i);
     }
   }
-  return answer
+  return answer;
 }
 
-  // console.log(removeUrlAnchor('www.codewars.com#about')) //, 'www.codewars.com')
-  //   console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about')) //, 'www.codewars.com/katas/?page=1')
-  // console.log(removeUrlAnchor('www.codewars.com/katas/')) //, 'www.codewars.com/katas/')
+// console.log(removeUrlAnchor('www.codewars.com#about')) //, 'www.codewars.com')
+//   console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about')) //, 'www.codewars.com/katas/?page=1')
+// console.log(removeUrlAnchor('www.codewars.com/katas/')) //, 'www.codewars.com/katas/')
 
-  // ? Problem 42
-  // ? Write a function that takes a single string (word) as argument. The function must return an ordered list containing the indexes of all capital letters in the string.
+// ? Problem 42
+// ? Write a function that takes a single string (word) as argument. The function must return an ordered list containing the indexes of all capital letters in the string.
 
-  var capitals = function (word) {
-    let answer = []
-    for (let i = 0; i < word.length ; i++) {
-      if (word[i] === word[i].toUpperCase()) {
-        answer.push(i)
-
-      }
+var capitals = function (word) {
+  let answer = [];
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === word[i].toUpperCase()) {
+      answer.push(i);
     }
-    return answer
-  };
+  }
+  return answer;
+};
 
-  // console.log(capitals('CodEWaRs')) // *, [0,3,4,6] );
+// console.log(capitals('CodEWaRs')) // *, [0,3,4,6] );
 
-  // ? Problem 43
-  // ? A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence 
+// ? Problem 43
+// ? A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence
 
-  function isPangram(string){
+function isPangram(string) {
   if (string.match(/([a-z])(?!.*\1)/gi).length === 26) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
-
 
 // console.log(isPangram("The quick brown fox jumps over the lazy dog."))
 // console.log(isPangram("This is not a pangram."))
 
+// ? Problem 44
+// ? Return the number (count) of vowels in the given string.
+// ? We will consider a, e, i, o, u as vowels for this Kata (but not y).
+// ? The input string will only consist of lower case letters and/or spaces.
 
+function getCount(str) {
+  let newString = str.toLowerCase();
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (
+      newString[i] === "a" ||
+      newString[i] === "e" ||
+      newString[i] === "i" ||
+      newString[i] === "o" ||
+      newString[i] === "u"
+    ) {
+      count++;
+    } else {
+      continue;
+    }
+  }
+  return count;
+}
 
-
-
-
-
-
+// console.log(getCount("abracadabra")); // *, 5) ;
