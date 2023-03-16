@@ -991,3 +991,21 @@ function getCount(str) {
 }
 
 // console.log(getCount("abracadabra")); // *, 5) ;
+
+// ? Problem 45
+// ? You are given an array with positive numbers and a non-negative number N. You should find the N-th power of the element in the array with the index N. If N is outside of the array, then return -1. Don't forget that the first element has the index 0.
+
+function index(array, n){
+  let answer = 0
+  let index = array[n]
+  if (array[n] === undefined) {
+    return -1
+  } else {
+     answer = Math.floor(Math.pow(index, n))
+  }
+  return answer
+}
+
+// console.log(index([1, 2, 3, 4], 2)) // *,9);
+// console.log(index([1, 3, 10, 100] ,3)) // *,1000000);
+// console.log(index([1, 2],3)) // *,-1);
