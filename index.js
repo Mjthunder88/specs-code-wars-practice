@@ -1009,3 +1009,25 @@ function index(array, n){
 // console.log(index([1, 2, 3, 4], 2)) // *,9);
 // console.log(index([1, 3, 10, 100] ,3)) // *,1000000);
 // console.log(index([1, 2],3)) // *,-1);
+
+// ? Problem 46
+// ? In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+
+function findMultiples(integer, limit) {
+  let answer = []
+  for (let i = integer;i <= limit; i = i + integer) {
+    answer.push(i)
+  }
+  if (limit % integer !== 0) {
+      return answer
+  }
+  return answer
+}
+
+  
+
+
+console.log(findMultiples(5, 25)) // *, [5, 10, 15, 20, 25] );
+console.log(findMultiples(1, 2)) // *, [1, 2]);
+console.log(findMultiples(5, 7)) // *, [5]);
+console.log(findMultiples(4, 27)) // *, [4, 8, 12, 16, 20, 24])
