@@ -1051,3 +1051,23 @@ function nameShuffler(str){
 // console.log(nameShuffler('john McClane')) // *,'McClane john');
 // console.log(nameShuffler('Mary jeggins')) // *,'jeggins Mary')
 // console.log(nameShuffler('tom jerry')) // *,'jerry tom')
+
+// ? Problem 48
+
+// ? Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+function removeEveryOther(arr) {
+  let i = arr.length;
+
+  while (i--) i % 2 !== 0 && (arr.splice(i, 1));
+  return arr
+ 
+  }
+
+  
+
+console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])) // *,['Hello', 'Hello Again']);
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) // *,[1, 3, 5, 7, 9]);
+console.log(removeEveryOther([[1, 2]])) // *, [[1, 2]]);
+console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}])) // *,[['Goodbye']]);
+
