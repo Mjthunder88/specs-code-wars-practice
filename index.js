@@ -1027,7 +1027,27 @@ function findMultiples(integer, limit) {
   
 
 
-console.log(findMultiples(5, 25)) // *, [5, 10, 15, 20, 25] );
-console.log(findMultiples(1, 2)) // *, [1, 2]);
-console.log(findMultiples(5, 7)) // *, [5]);
-console.log(findMultiples(4, 27)) // *, [4, 8, 12, 16, 20, 24])
+// console.log(findMultiples(5, 25)) // *, [5, 10, 15, 20, 25] );
+// console.log(findMultiples(1, 2)) // *, [1, 2]);
+// console.log(findMultiples(5, 7)) // *, [5]);
+// console.log(findMultiples(4, 27)) // *, [4, 8, 12, 16, 20, 24])
+
+
+// ? Problem 47
+
+// ? Write a function that returns a string in which firstname is swapped with last name.
+
+function nameShuffler(str){
+  let arr = []
+  let answer = ''
+  arr = str.split(' ')
+  console.log(arr)
+  answer = arr.push(arr.splice(0, 1)[0])
+  answer = arr.join(' ')
+  console.log(answer)
+  return answer
+}
+
+// console.log(nameShuffler('john McClane')) // *,'McClane john');
+// console.log(nameShuffler('Mary jeggins')) // *,'jeggins Mary')
+// console.log(nameShuffler('tom jerry')) // *,'jerry tom')
