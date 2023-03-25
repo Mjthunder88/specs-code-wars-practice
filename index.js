@@ -1066,8 +1066,33 @@ function removeEveryOther(arr) {
 
   
 
-console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])) // *,['Hello', 'Hello Again']);
-console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) // *,[1, 3, 5, 7, 9]);
-console.log(removeEveryOther([[1, 2]])) // *, [[1, 2]]);
-console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}])) // *,[['Goodbye']]);
+// console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])) // *,['Hello', 'Hello Again']);
+// console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) // *,[1, 3, 5, 7, 9]);
+// console.log(removeEveryOther([[1, 2]])) // *, [[1, 2]]);
+// console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}])) // *,[['Goodbye']]);
+
+// ? Problem 49
+
+// ? Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+function invert(array) {
+  let answer = []
+  if (array === []) {
+    return []
+  }
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] <= 0 ) {
+      answer.push(array[i] * -1)
+    } else if (array[i] > 0) {
+      answer.push(array[i] * -1)
+    }
+  }
+  return answer
+}
+
+console.log(invert([1,2,3,4,5])) // *, [-1,-2,-3,-4,-5]);
+console.log(invert([1,-2,3,-4,5])) // *, [-1,2,-3,4,-5]);
+console.log(invert([])) // *, []);
+console.log(invert([0])) // *, [-0]);
+
 
