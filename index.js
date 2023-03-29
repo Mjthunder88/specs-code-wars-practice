@@ -995,15 +995,15 @@ function getCount(str) {
 // ? Problem 45
 // ? You are given an array with positive numbers and a non-negative number N. You should find the N-th power of the element in the array with the index N. If N is outside of the array, then return -1. Don't forget that the first element has the index 0.
 
-function index(array, n){
-  let answer = 0
-  let index = array[n]
+function index(array, n) {
+  let answer = 0;
+  let index = array[n];
   if (array[n] === undefined) {
-    return -1
+    return -1;
   } else {
-     answer = Math.floor(Math.pow(index, n))
+    answer = Math.floor(Math.pow(index, n));
   }
-  return answer
+  return answer;
 }
 
 // console.log(index([1, 2, 3, 4], 2)) // *,9);
@@ -1014,38 +1014,34 @@ function index(array, n){
 // ? In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
 
 function findMultiples(integer, limit) {
-  let answer = []
-  for (let i = integer;i <= limit; i = i + integer) {
-    answer.push(i)
+  let answer = [];
+  for (let i = integer; i <= limit; i = i + integer) {
+    answer.push(i);
   }
   if (limit % integer !== 0) {
-      return answer
+    return answer;
   }
-  return answer
+  return answer;
 }
-
-  
-
 
 // console.log(findMultiples(5, 25)) // *, [5, 10, 15, 20, 25] );
 // console.log(findMultiples(1, 2)) // *, [1, 2]);
 // console.log(findMultiples(5, 7)) // *, [5]);
 // console.log(findMultiples(4, 27)) // *, [4, 8, 12, 16, 20, 24])
 
-
 // ? Problem 47
 
 // ? Write a function that returns a string in which firstname is swapped with last name.
 
-function nameShuffler(str){
-  let arr = []
-  let answer = ''
-  arr = str.split(' ')
-  console.log(arr)
-  answer = arr.push(arr.splice(0, 1)[0])
-  answer = arr.join(' ')
-  console.log(answer)
-  return answer
+function nameShuffler(str) {
+  let arr = [];
+  let answer = "";
+  arr = str.split(" ");
+  console.log(arr);
+  answer = arr.push(arr.splice(0, 1)[0]);
+  answer = arr.join(" ");
+  console.log(answer);
+  return answer;
 }
 
 // console.log(nameShuffler('john McClane')) // *,'McClane john');
@@ -1059,12 +1055,9 @@ function nameShuffler(str){
 function removeEveryOther(arr) {
   let i = arr.length;
 
-  while (i--) i % 2 !== 0 && (arr.splice(i, 1));
-  return arr
- 
-  }
-
-  
+  while (i--) i % 2 !== 0 && arr.splice(i, 1);
+  return arr;
+}
 
 // console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])) // *,['Hello', 'Hello Again']);
 // console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) // *,[1, 3, 5, 7, 9]);
@@ -1076,18 +1069,18 @@ function removeEveryOther(arr) {
 // ? Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
 
 function invert(array) {
-  let answer = []
+  let answer = [];
   if (array === []) {
-    return []
+    return [];
   }
   for (let i = 0; i < array.length; i++) {
-    if (array[i] <= 0 ) {
-      answer.push(array[i] * -1)
+    if (array[i] <= 0) {
+      answer.push(array[i] * -1);
     } else if (array[i] > 0) {
-      answer.push(array[i] * -1)
+      answer.push(array[i] * -1);
     }
   }
-  return answer
+  return answer;
 }
 
 // console.log(invert([1,2,3,4,5])) // *, [-1,-2,-3,-4,-5]);
@@ -1095,19 +1088,32 @@ function invert(array) {
 // console.log(invert([])) // *, []);
 // console.log(invert([0])) // *, [-0]);
 
-
 // ? Problem 50
 // ? Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
 
 function between(a, b) {
-  let answer = []
+  let answer = [];
   while (a <= b) {
-    answer.push(a)
-    a++
+    answer.push(a);
+    a++;
   }
-  return answer
+  return answer;
 }
 
-  // console.log(between(1, 4)) // *, [1, 2, 3, 4]));
+// console.log(between(1, 4)) // *, [1, 2, 3, 4]));
 
-  // console.log(between(-2, 2)) // *, [-2, -1, 0, 1, 2]));
+// console.log(between(-2, 2)) // *, [-2, -1, 0, 1, 2]));
+
+// ? Problem 51
+
+// ? Given an array of integers your solution should find the smallest integer.
+
+let findSmallestInt = (args) => {
+  return Math.min(...args);
+};
+
+// console.log(findSmallestInt([78,56,232,12,8])) // *,8,'Should return the smallest int 8');
+// console.log(findSmallestInt([78,56,232,12,18])) // *,12,'Should return the smallest int 12');
+// console.log(findSmallestInt([78,56,232,412,228])) // *,56,'Should return the smallest int 56');
+// console.log(findSmallestInt([78,56,232,12,0])) // *,0,'Should return the smallest int 0');
+// console.log(findSmallestInt([1,56,232,12,8])) // *,1,'Should return the smallest int 1');
