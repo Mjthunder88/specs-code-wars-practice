@@ -1117,3 +1117,23 @@ let findSmallestInt = (args) => {
 // console.log(findSmallestInt([78,56,232,412,228])) // *,56,'Should return the smallest int 56');
 // console.log(findSmallestInt([78,56,232,12,0])) // *,0,'Should return the smallest int 0');
 // console.log(findSmallestInt([1,56,232,12,8])) // *,1,'Should return the smallest int 1');
+
+
+// ? Problem 52 
+
+function getRealFloor(n) {
+  if (n === 0) {
+    return 0
+  } else if (n > 13) {
+    return n - 2
+  } else if (n !== n * -1) {
+    return n
+  } else {
+    return n - 1
+  }
+}
+
+console.log(getRealFloor( 1)) // *,  0);
+console.log(getRealFloor( 5)) // *,  4);
+console.log(getRealFloor(15)) // *, 13);
+console.log(getRealFloor(-2)) // *, -2);
