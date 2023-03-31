@@ -1133,7 +1133,45 @@ function getRealFloor(n) {
   }
 }
 
-console.log(getRealFloor( 1)) // *,  0);
-console.log(getRealFloor( 5)) // *,  4);
-console.log(getRealFloor(15)) // *, 13);
-console.log(getRealFloor(-2)) // *, -2);
+// console.log(getRealFloor( 1)) // *,  0);
+// console.log(getRealFloor( 5)) // *,  4);
+// console.log(getRealFloor(15)) // *, 13);
+// console.log(getRealFloor(-2)) // *, -2);
+
+
+// ? Problem 53
+
+function boolToWord( bool ) {
+  return bool === true ? "Yes" : "No" 
+}
+
+    // console.log(boolToWord(true)) // *, 'Yes')
+    // console.log(boolToWord(false)) // *, 'No')
+
+
+// ? Problem 54
+
+function incrementString (string) {
+  let arr = string.split('')
+  console.log(arr)
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === typeof number) {
+      console.log('HELLO')
+    }
+  }
+}
+
+// ? Your job is to write a function which increments a string, to create a new string.
+// ? If the string already ends with a number, the number should be incremented by 1.
+// ? If the string does not end with a number. the number 1 should be appended to the new string.
+
+
+console.log(incrementString("foobar000")) // * , "foobar001");
+// console.log(incrementString("foobar999")) // * , "foobar1000");
+// console.log(incrementString("foobar00999")) // * , "foobar01000");
+// console.log(incrementString("foo")) // * , "foo1");
+// console.log(incrementString("foobar001")) // * , "foobar002");
+// console.log(incrementString("foobar1")) // * , "foobar2");
+// console.log(incrementString("1")) // * , "2");
+// console.log(incrementString("009")) // * , "010");
+// console.log(incrementString("fo99obar99")) // * , "fo99obar100");
