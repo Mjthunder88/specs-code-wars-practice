@@ -1152,13 +1152,18 @@ function boolToWord( bool ) {
 // ? Problem 54
 
 function incrementString (string) {
+  let answer = ""
   let arr = string.split('')
   console.log(arr)
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] === typeof number) {
-      console.log('HELLO')
+  let length = string.length
+   answer = arr.map((element, index) => {
+    if (parseInt(element) && length - 1 === index ) {
+      return +element + 1
+    } else  if (parseInt(element) === NaN) {
+      return arr.push(1)
     }
-  }
+  })
+  return answer
 }
 
 // ? Your job is to write a function which increments a string, to create a new string.
@@ -1166,7 +1171,7 @@ function incrementString (string) {
 // ? If the string does not end with a number. the number 1 should be appended to the new string.
 
 
-console.log(incrementString("foobar000")) // * , "foobar001");
+// console.log(incrementString("foobar000")) // * , "foobar001");
 // console.log(incrementString("foobar999")) // * , "foobar1000");
 // console.log(incrementString("foobar00999")) // * , "foobar01000");
 // console.log(incrementString("foo")) // * , "foo1");
@@ -1175,3 +1180,44 @@ console.log(incrementString("foobar000")) // * , "foobar001");
 // console.log(incrementString("1")) // * , "2");
 // console.log(incrementString("009")) // * , "010");
 // console.log(incrementString("fo99obar99")) // * , "fo99obar100");
+
+
+
+// ? Problem 54
+
+var laLigaGoals = 43
+var championsLeagueGoals = 10
+var copaDelReyGoals = 5
+
+var totalGoals = 58
+
+
+
+// ? Problem 55
+
+
+function findUniq(arr) {
+     const res = [];
+     for(let i = 0; i < arr.length; i++){
+        if(arr.lastIndexOf(arr[i]) !== arr.indexOf(arr[i])){
+           continue;
+        };
+        res.push(arr[i]);
+     };
+     return res[0];
+}
+
+// TODO .lastIndexOf() FINDS THE LAST OCCURANCE OF THAT TARGET VALUE 
+// TODO SO IF THE LAST OCCURANCE DOES NOT EQUAL THE CURRENT INDEX OF THAT VALUE THAT MEANS ITS NOT UNIQUE. 
+// TODO IT GOES UNTIL ITS FINISHED AND FOUND THE VALUE THAT DOESN'T HAVE A RECURRING INDEX OR MULTIPLE VALUES.
+
+
+
+// console.log(findUniq([ 1, 0, 0 ])) // *, 1);
+// console.log(findUniq([ 0, 1, 0 ])) // *, 1);
+// console.log(findUniq([ 0, 0, 1 ])) // *, 1);
+// console.log(findUniq([ 1, 1, 1, 2, 1, 1 ])) // *, 2);
+// console.log(findUniq([ 1, 1, 2, 1, 1 ])) // *, 2);
+console.log(findUniq([ 3, 10, 3, 3, 3 ])) // *, 10);
+
+
