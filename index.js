@@ -1218,6 +1218,37 @@ function findUniq(arr) {
 // console.log(findUniq([ 0, 0, 1 ])) // *, 1);
 // console.log(findUniq([ 1, 1, 1, 2, 1, 1 ])) // *, 2);
 // console.log(findUniq([ 1, 1, 2, 1, 1 ])) // *, 2);
-console.log(findUniq([ 3, 10, 3, 3, 3 ])) // *, 10);
+// console.log(findUniq([ 3, 10, 3, 3, 3 ])) // *, 10);
+
+
+// ? Problem 56
+
+function past(h, m, s){
+  return (h*60*60+m*60+s)*1000
+}
+
+    // console.log(past(0,1,1)) // *,61000)
+    // console.log(past(1,1,1)) // *,3661000)
+    // console.log(past(0,0,0)) // *,0)
+    // console.log(past(1,0,1)) // *,3601000)
+    // console.log(past(1,0,0)) // *,3600000)
+    
+
+  // ? Problem 57
+
+  function findShort(s){
+    let answer = []
+    let arr = s.split(' ')
+    answer = arr.map((element, index) => {
+      // console.log(element.length)
+      return element.length
+    })
+    return Math.min(...answer)
+    
+  }
+
+  // console.log(findShort("bitcoin take over the world maybe who knows perhaps")) // *, 3);
+  // console.log(findShort("turns out random test cases are easier than writing out basic ones")) // *, 3); 
+  // console.log(findShort("Let's travel abroad shall we")) // *, 2);
 
 
