@@ -1118,18 +1118,17 @@ let findSmallestInt = (args) => {
 // console.log(findSmallestInt([78,56,232,12,0])) // *,0,'Should return the smallest int 0');
 // console.log(findSmallestInt([1,56,232,12,8])) // *,1,'Should return the smallest int 1');
 
-
-// ? Problem 52 
+// ? Problem 52
 
 function getRealFloor(n) {
   if (n === 0) {
-    return 0
+    return 0;
   } else if (n > 13) {
-    return n - 2
+    return n - 2;
   } else if (n !== n * -1) {
-    return n
+    return n;
   } else {
-    return n - 1
+    return n - 1;
   }
 }
 
@@ -1138,38 +1137,35 @@ function getRealFloor(n) {
 // console.log(getRealFloor(15)) // *, 13);
 // console.log(getRealFloor(-2)) // *, -2);
 
-
 // ? Problem 53
 
-function boolToWord( bool ) {
-  return bool === true ? "Yes" : "No" 
+function boolToWord(bool) {
+  return bool === true ? "Yes" : "No";
 }
 
-    // console.log(boolToWord(true)) // *, 'Yes')
-    // console.log(boolToWord(false)) // *, 'No')
-
+// console.log(boolToWord(true)) // *, 'Yes')
+// console.log(boolToWord(false)) // *, 'No')
 
 // ? Problem 54
 
-function incrementString (string) {
-  let answer = ""
-  let arr = string.split('')
-  console.log(arr)
-  let length = string.length
-   answer = arr.map((element, index) => {
-    if (parseInt(element) && length - 1 === index ) {
-      return +element + 1
-    } else  if (parseInt(element) === NaN) {
-      return arr.push(1)
+function incrementString(string) {
+  let answer = "";
+  let arr = string.split("");
+  console.log(arr);
+  let length = string.length;
+  answer = arr.map((element, index) => {
+    if (parseInt(element) && length - 1 === index) {
+      return +element + 1;
+    } else if (parseInt(element) === NaN) {
+      return arr.push(1);
     }
-  })
-  return answer
+  });
+  return answer;
 }
 
 // ? Your job is to write a function which increments a string, to create a new string.
 // ? If the string already ends with a number, the number should be incremented by 1.
 // ? If the string does not end with a number. the number 1 should be appended to the new string.
-
 
 // console.log(incrementString("foobar000")) // * , "foobar001");
 // console.log(incrementString("foobar999")) // * , "foobar1000");
@@ -1181,37 +1177,30 @@ function incrementString (string) {
 // console.log(incrementString("009")) // * , "010");
 // console.log(incrementString("fo99obar99")) // * , "fo99obar100");
 
-
-
 // ? Problem 54
 
-var laLigaGoals = 43
-var championsLeagueGoals = 10
-var copaDelReyGoals = 5
+var laLigaGoals = 43;
+var championsLeagueGoals = 10;
+var copaDelReyGoals = 5;
 
-var totalGoals = 58
-
-
+var totalGoals = 58;
 
 // ? Problem 55
 
-
 function findUniq(arr) {
-     const res = [];
-     for(let i = 0; i < arr.length; i++){
-        if(arr.lastIndexOf(arr[i]) !== arr.indexOf(arr[i])){
-           continue;
-        };
-        res.push(arr[i]);
-     };
-     return res[0];
+  const res = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.lastIndexOf(arr[i]) !== arr.indexOf(arr[i])) {
+      continue;
+    }
+    res.push(arr[i]);
+  }
+  return res[0];
 }
 
-// TODO .lastIndexOf() FINDS THE LAST OCCURANCE OF THAT TARGET VALUE 
-// TODO SO IF THE LAST OCCURANCE DOES NOT EQUAL THE CURRENT INDEX OF THAT VALUE THAT MEANS ITS NOT UNIQUE. 
+// TODO .lastIndexOf() FINDS THE LAST OCCURANCE OF THAT TARGET VALUE
+// TODO SO IF THE LAST OCCURANCE DOES NOT EQUAL THE CURRENT INDEX OF THAT VALUE THAT MEANS ITS NOT UNIQUE.
 // TODO IT GOES UNTIL ITS FINISHED AND FOUND THE VALUE THAT DOESN'T HAVE A RECURRING INDEX OR MULTIPLE VALUES.
-
-
 
 // console.log(findUniq([ 1, 0, 0 ])) // *, 1);
 // console.log(findUniq([ 0, 1, 0 ])) // *, 1);
@@ -1220,35 +1209,46 @@ function findUniq(arr) {
 // console.log(findUniq([ 1, 1, 2, 1, 1 ])) // *, 2);
 // console.log(findUniq([ 3, 10, 3, 3, 3 ])) // *, 10);
 
-
 // ? Problem 56
 
-function past(h, m, s){
-  return (h*60*60+m*60+s)*1000
+function past(h, m, s) {
+  return (h * 60 * 60 + m * 60 + s) * 1000;
 }
 
-    // console.log(past(0,1,1)) // *,61000)
-    // console.log(past(1,1,1)) // *,3661000)
-    // console.log(past(0,0,0)) // *,0)
-    // console.log(past(1,0,1)) // *,3601000)
-    // console.log(past(1,0,0)) // *,3600000)
-    
+// console.log(past(0,1,1)) // *,61000)
+// console.log(past(1,1,1)) // *,3661000)
+// console.log(past(0,0,0)) // *,0)
+// console.log(past(1,0,1)) // *,3601000)
+// console.log(past(1,0,0)) // *,3600000)
 
-  // ? Problem 57
+// ? Problem 57
 
-  function findShort(s){
-    let answer = []
-    let arr = s.split(' ')
-    answer = arr.map((element, index) => {
-      // console.log(element.length)
-      return element.length
-    })
-    return Math.min(...answer)
-    
-  }
+function findShort(s) {
+  let answer = [];
+  let arr = s.split(" ");
+  answer = arr.map((element, index) => {
+    // console.log(element.length)
+    return element.length;
+  });
+  return Math.min(...answer);
+}
 
-  // console.log(findShort("bitcoin take over the world maybe who knows perhaps")) // *, 3);
-  // console.log(findShort("turns out random test cases are easier than writing out basic ones")) // *, 3); 
-  // console.log(findShort("Let's travel abroad shall we")) // *, 2);
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps")) // *, 3);
+// console.log(findShort("turns out random test cases are easier than writing out basic ones")) // *, 3);
+// console.log(findShort("Let's travel abroad shall we")) // *, 2);
 
+// ? Problem 58
 
+function reverseWords(str) {
+  let arr = str.split("");
+  // console.log(arr)
+  let reverse = arr.reverse().join("");
+  // console.log(reverse)
+  let r2 = reverse.split(" ").reverse().join(" ");
+  return r2;
+}
+
+// console.log(reverseWords('The quick brown fox jumps over the lazy dog.')) // *, 'ehT kciuq nworb xof spmuj revo eht yzal .god');
+// console.log(reverseWords('apple')) // ?, 'elppa');
+// console.log(reverseWords('a b c d')) // ?, 'a b c d');
+// console.log(reverseWords('double  spaced  words')) // ?, 'elbuod  decaps  sdrow');
