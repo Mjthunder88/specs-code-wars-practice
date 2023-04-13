@@ -1271,20 +1271,31 @@ function getChar(c) {
 // console.log(getChar(64)) // *,'@')
 // console.log(getChar(65)) // *,'A')
 
-
 // ? Problem 60
 
 function peopleWithAgeDrink(old) {
   if (old < 14) {
-    return "drink toddy"
-  } else if (old < 18 ) {
-    return "drink coke"
-  } else if (old < 21 ) {
-    return "drink beer"
-  } else if (old >= 21 ) {
-    return "drink whisky"
+    return "drink toddy";
+  } else if (old < 18) {
+    return "drink coke";
+  } else if (old < 21) {
+    return "drink beer";
+  } else if (old >= 21) {
+    return "drink whisky";
   }
-};
+}
 
+// console.log(peopleWithAgeDrink(22)) // *, 'drink whisky');
 
-    // console.log(peopleWithAgeDrink(22)) // *, 'drink whisky');
+// ? Problem 61
+
+// ? In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces indicated by the dice two times.
+// ? Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
+
+function move(position, roll) {
+  return roll * 2 + position;
+}
+
+// console.log(move(0, 4)); // *, 8);
+// console.log(move(3, 6)); // *, 15);
+// console.log(move(2, 5)); // *, 12);
