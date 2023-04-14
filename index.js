@@ -1299,3 +1299,20 @@ function move(position, roll) {
 // console.log(move(0, 4)); // *, 8);
 // console.log(move(3, 6)); // *, 15);
 // console.log(move(2, 5)); // *, 12);
+
+// ? Problem 62
+
+function xor(a, b) {
+  if (a === true && b === true) {
+    return false;
+  } else if (a === true || b === true) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// console.log(xor(false, false)) // *, false, "false xor false");
+// console.log(xor(true, false)) // *, true, "true xor false");
+// console.log(xor(false, true)) // *, true, "false xor true");
+// console.log(xor(true, true)) // *, false, "true xor true");
