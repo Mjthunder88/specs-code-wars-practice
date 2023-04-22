@@ -1316,3 +1316,20 @@ function xor(a, b) {
 // console.log(xor(true, false)) // *, true, "true xor false");
 // console.log(xor(false, true)) // *, true, "false xor true");
 // console.log(xor(true, true)) // *, false, "true xor true");
+
+// ? Problem 63
+
+function digitize(n) {
+  let answer = [];
+  let newStr = n.toString();
+  let newArr = [];
+  newArr = newStr.split("").reverse();
+  answer = newArr.map((element, index) => {
+    return parseFloat(element);
+  });
+
+  return answer;
+}
+
+// console.log(digitize(35231)); // *,[1,3,2,5,3]);
+// console.log(digitize(0)); // *,[0]);
