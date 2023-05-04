@@ -1343,3 +1343,29 @@ function unusualFive() {
   let str = "fives";
   return str.length;
 }
+
+// ? Problem 65
+
+function descendingOrder(n) {
+  let arr = [];
+  let answer = 0;
+  if (n.length < 2) {
+    return n;
+  }
+  arr = n.toString().split("");
+
+  arr.sort((a, b) => {
+    return b - a;
+  });
+
+  answer = +arr.join("");
+
+  return answer;
+}
+
+console.log(descendingOrder(0)); // *, 0)
+console.log(descendingOrder(1)); // *, 1)
+console.log(descendingOrder(111)); // *, 111)
+console.log(descendingOrder(15)); // *, 51)
+console.log(descendingOrder(1021)); // *, 2110)
+console.log(descendingOrder(123456789)); // *, 987654321)
