@@ -1363,9 +1363,56 @@ function descendingOrder(n) {
   return answer;
 }
 
-console.log(descendingOrder(0)); // *, 0)
-console.log(descendingOrder(1)); // *, 1)
-console.log(descendingOrder(111)); // *, 111)
-console.log(descendingOrder(15)); // *, 51)
-console.log(descendingOrder(1021)); // *, 2110)
-console.log(descendingOrder(123456789)); // *, 987654321)
+// console.log(descendingOrder(0)); // *, 0)
+// console.log(descendingOrder(1)); // *, 1)
+// console.log(descendingOrder(111)); // *, 111)
+// console.log(descendingOrder(15)); // *, 51)
+// console.log(descendingOrder(1021)); // *, 2110)
+// console.log(descendingOrder(123456789)); // *, 987654321)
+
+// ? Problem 64
+
+
+
+function getGrade (s1, s2, s3) {
+  let grade = 0
+  grade = (s1 + s2 + s3) / 3
+  if (grade >= 90 && grade <= 100 ) {
+    return 'A'
+  }
+   else if (grade >= 80 && grade < 90 ) {
+    return 'B'
+  }
+   else if (grade>= 70 && grade < 80 ) {
+    return 'C'
+  }
+  else if (grade >= 60 && grade < 70 ) {
+    return 'D'
+  }
+  else if (grade >= 0 && grade< 60 ) {
+    return 'F'
+  }
+}
+
+
+
+  // console.log(getGrade(95,90,93)) // *, 'A')
+  // console.log(getGrade(100,85,96)) // *, 'A')
+  // console.log(getGrade(92,93,94)) // *, 'A')
+
+  // console.log(getGrade(70,70,100)) // *, 'B')
+  // console.log(getGrade(82,85,87)) // *, 'B')
+  // console.log(getGrade(84,79,85)) // *, 'B')
+  // console.log(getGrade(89,89,90)) // *, 'B') 
+  
+  // console.log(getGrade(70,70,70)) // *, 'C')
+  // console.log(getGrade(75,70,79)) // *, 'C')
+  // console.log(getGrade(60,82,76)) // *, 'C')
+  
+  // console.log(getGrade(65,70,59)) // *, 'D')
+  // console.log(getGrade(66,62,68)) // *, 'D')
+  // console.log(getGrade(58,62,70)) // *, 'D')
+  
+  // console.log(getGrade(44,55,52)) // *, 'F')
+  // console.log(getGrade(48,55,52)) // *, 'F')
+  // console.log(getGrade(58,59,60)) // *, 'F')
