@@ -1416,3 +1416,13 @@ function getGrade (s1, s2, s3) {
   // console.log(getGrade(44,55,52)) // *, 'F')
   // console.log(getGrade(48,55,52)) // *, 'F')
   // console.log(getGrade(58,59,60)) // *, 'F')
+
+
+  // ? Problem 65
+
+  function reverseList(list) {
+      return list.reverse()
+  }
+
+  console.log(reverseList([1,2,3,4])) // *, [4,3,2,1]);
+console.log(reverseList([3,1,5,4])) // *, [4,5,1,3]);
