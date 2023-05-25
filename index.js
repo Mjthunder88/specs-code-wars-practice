@@ -1424,5 +1424,24 @@ function getGrade (s1, s2, s3) {
       return list.reverse()
   }
 
-  console.log(reverseList([1,2,3,4])) // *, [4,3,2,1]);
-console.log(reverseList([3,1,5,4])) // *, [4,5,1,3]);
+//   console.log(reverseList([1,2,3,4])) // *, [4,3,2,1]);
+// console.log(reverseList([3,1,5,4])) // *, [4,5,1,3]);
+
+
+// ? Problem 66
+
+function removeSmallest(numbers) {
+  const copy = [...numbers];
+  
+  let small = Math.min(... numbers)
+  let index = copy.indexOf(small);
+  copy.splice(index,1);
+
+  return copy;
+}
+
+
+console.log(removeSmallest([1, 2, 3, 4, 5])) // *, [2, 3, 4, 5], "Wrong result for [1, 2, 3, 4, 5]");
+console.log(removeSmallest([5, 3, 2, 1, 4])) // *, [5, 3, 2, 4], "Wrong result for [5, 3, 2, 1, 4]");
+console.log(removeSmallest([2, 2, 1, 2, 1])) // *, [2, 2, 2, 1], "Wrong result for [2, 2, 1, 2, 1]");
+console.log(removeSmallest([])) // *, [], "Wrong result for []")
